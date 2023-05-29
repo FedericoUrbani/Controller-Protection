@@ -7,9 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @ToString
 public class Salary {
@@ -27,5 +24,35 @@ public class Salary {
 
     public Salary(Double salary) {
         this.salary=salary;
+    }
+
+    public Salary(Long id, double salary, UserEntity user) {
+        this.id = id;
+        this.salary = salary;
+        this.user = user;
+    }
+    public Salary(){}
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public UserEntity getUser() {
+        return user;
+    }
+
+    public void setUser(UserEntity user) {
+        this.user = user;
     }
 }

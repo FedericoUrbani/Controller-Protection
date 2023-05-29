@@ -16,8 +16,6 @@ public class HelloController {
     @Autowired
     SalaryRepository salaryRepository;
     @Autowired
-    SalaryService salaryService;
-    @Autowired
     UserRepository userRepository;
 
     @GetMapping("/hello")
